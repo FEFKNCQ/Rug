@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <AssemblyName>Rug</AssemblyName>
+    <RootNamespace>Rug</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <PlatformTarget>x64</PlatformTarget>
+    <SelfContained>false</SelfContained>
+    <ApplicationIcon>Resources\codeblanks.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\rugs\*.*" LogicalName="rugs/%(Filename)%(Extension)" />
+    <EmbeddedResource Include="Resources\floors\*.*" LogicalName="floors/%(Filename)%(Extension)" />
+    <EmbeddedResource Include="Resources\codeblanks.ico" LogicalName="codeblanks.ico" />
+  </ItemGroup>
+
+  <Target Name="CopyRugNative" AfterTargets="Build">
+    <Copy SourceFiles="$(MSBuildProjectDirectory)\..\x64\$(Configuration)\rug_native.dll" DestinationFolder="$(OutDir)" SkipUnchangedFiles="false" />
+  </Target>
+
+</Project>

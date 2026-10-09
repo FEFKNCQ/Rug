@@ -1,0 +1,147 @@
+# Rug for Windows
+
+Sweep your desktop under the rug. A heavy wool rug lies on top of your desktop icons, the icons make bumps in it, and you can grab any edge to peek at the mess underneath.
+
+[Türkçe için aşağı inin](#türkçe)
+
+![Rug demo](docs/demo.gif)
+
+Thanks to [Terkel](https://x.com/terkelg) for the inspiration.
+
+This is a Windows port of [Rug for macOS](https://t.me/prompt_design) by Artem. The original app is the idea and the reference for the physics, lighting and settings. The Windows version is a new implementation, see [Credits](#credits).
+
+## Requirements
+
+- Windows 10 or 11, 64-bit
+- A graphics card with Direct3D 11 support
+- [.NET 8 Desktop Runtime (x64)](https://dotnet.microsoft.com/download/dotnet/8.0) if you run `Rug.exe` outside Visual Studio
+
+```cmd
+winget install --id Microsoft.DotNet.DesktopRuntime.8 --architecture x64 -e
+```
+
+## Build
+
+You need Visual Studio 2022 (or newer) with the **.NET desktop development** and **Desktop development with C++** workloads, plus the [.NET 8 SDK](https://dotnet.microsoft.com/download).
+
+1. Open `Rug.slnx`.
+2. Set the configuration to **Release | x64**.
+3. Build and run the `Rug` project.
+
+The build puts `Rug.exe` and `rug_native.dll` in `Rug\bin\Release\net8.0-windows\`. Keep the two files together. The rug and floor pictures are inside `Rug.exe`, so the `Resources` folder does not need to be copied anywhere.
+
+## Use
+
+- Drag the rug by any edge. Hold **Alt** to lift it flat in the air, and let go to drop it again.
+- Scroll over the rug to turn it. Hold **Alt** and scroll to resize it. While **Alt** is held, corner handles appear that you can drag to turn or resize the rug.
+- Right-click the tray icon (near the clock) for the quick menu. Double-click it to open the settings.
+- Settings has the rugs, the size, the desktop floors and the icon buttons. Closing the window keeps the rug on the desktop.
+- **Sweep icons under the rug** piles all desktop icons in a heap under the rug. **Put icons back** restores the old layout, even after you restart Rug. **Cover icons with the rug** hides the bumps under the rug.
+- Sweeping needs Explorer to stop arranging the icons by itself. Right-click an empty spot on the desktop, choose **View** and clear **Auto arrange icons**.
+- **Rug from your image…** turns any top-down picture into a rug. It looks best when the picture fills the whole frame.
+- **Desktop floor** changes the wallpaper. **Restore previous wallpaper** puts the old one back.
+- To quit, use **Quit Rug** in the tray menu. Starting Rug again while it is running just opens the settings.
+
+Outside the rug every click goes straight to the desktop.
+
+## Rugs and floors
+
+![Rugs](docs/rugs.jpg)
+
+Five rugs: Persian, Neural with circuit-board ornaments, Soviet, Pixel and Turkish. The Persian, Neural, Soviet and Pixel rugs are the same pictures as the macOS version.
+
+## How it works
+
+- A transparent window sits above the desktop icons and below all other windows. It ignores the mouse everywhere except over the rug.
+- The icon positions are read from Explorer, so every icon becomes a bump in the right place.
+- The cloth is a physics simulation with friction and self-collisions, so it folds and settles instead of stretching like rubber.
+- The rug is drawn with Direct3D 11, with soft shadows and the wool relief from the picture.
+
+## Known limitations
+
+- Only the main monitor is covered.
+- The floor shadow is not drawn yet.
+- If Explorer restarts, restart Rug as well.
+- Sweeping does not work while **Auto arrange icons** is on.
+
+## Credits
+
+- Original macOS app **Rug** by Artem, MIT licensed. The idea of sweeping the desktop under a rug is inspired by [Terkel](https://x.com/terkelg).
+- Windows port: CodeBlanks ([codeblanks](https://codeblanks.com)).
+
+## License
+
+MIT. See [LICENSE](LICENSE).
+
+---
+
+## Türkçe
+
+Masaüstünüzü halının altına süpürün. Ağır bir yün halı masaüstü simgelerinizin üzerine serilir, simgeler halıda kabarcıklar yapar, halının bir kenarını tutup altındaki karmaşaya bakabilirsiniz.
+
+Bu proje, Artem'in macOS için yaptığı [Rug](https://t.me/prompt_design) uygulamasının Windows sürümüdür. Orijinal uygulama fikrin ve fizik, ışık ile ayarların referansıdır. Windows sürümü baştan yazılmış yeni bir uygulamadır, bkz. [Teşekkür](#teşekkür).
+
+Fikir için [Terkel](https://x.com/terkelg)'e teşekkür ederiz.
+
+### Gereksinimler
+
+- Windows 10 veya 11, 64 bit
+- Direct3D 11 destekleyen bir ekran kartı
+- Visual Studio dışında `Rug.exe` çalıştıracaksanız [.NET 8 Desktop Runtime (x64)](https://dotnet.microsoft.com/download/dotnet/8.0)
+
+```cmd
+winget install --id Microsoft.DotNet.DesktopRuntime.8 --architecture x64 -e
+```
+
+### Derleme
+
+Visual Studio 2022 (veya daha yeni), **.NET desktop development** ve **Desktop development with C++** iş yüklerine ihtiyacınız var. Ayrıca [.NET 8 SDK](https://dotnet.microsoft.com/download) gerekir.
+
+1. `Rug.slnx` dosyasını açın.
+2. Yapılandırmayı **Release | x64** yapın.
+3. `Rug` projesini derleyip çalıştırın.
+
+Derleme `Rug.exe` ile `rug_native.dll` dosyasını `Rug\bin\Release\net8.0-windows\` klasörüne koyar. İkisini yan yana tutun. Halı ve zemin resimleri `Rug.exe` içine gömülüdür, ayrıca bir klasör kopyalamanız gerekmez.
+
+### Kullanım
+
+- Halıyı herhangi bir kenarından sürükleyin. **Alt** tuşunu basılı tutarsanız halı havada düz kalkar, bırakınca tekrar iner.
+- Halının üzerinde fareyi kaydırarak döndürün. **Alt** basılıyken kaydırarak boyutunu değiştirin. **Alt** basılıyken beliren köşe tutamaçlarını sürükleyerek de döndürüp boyutlandırabilirsiniz.
+- Saatin yanındaki tepsi simgesine sağ tıklayarak hızlı menüyü açın, çift tıklayarak ayarları açın.
+- Ayarlarda halılar, boyut, masaüstü zemini ve simge düğmeleri bulunur. Pencereyi kapatmak halıyı masaüstünde bırakır.
+- **Sweep icons under the rug** (simgeleri halının altına süpür) tüm masaüstü simgelerini halının altında bir yığın yapar. **Put icons back** eski düzeni geri getirir, Rug'ı yeniden başlatsanız bile. **Cover icons with the rug** kabarcıkları halının altında gizler.
+- Süpürme için Explorer'ın simgeleri kendi kendine dizmesi kapalı olmalı. Masaüstünde boş bir yere sağ tıklayın, **Görünüm**'ü seçin ve **Simgeleri otomatik hizala** seçeneğini kaldırın.
+- **Rug from your image…** herhangi bir üstten çekilmiş resmi halıya çevirir. Resim tüm kareyi kapladığında en iyi görünür.
+- **Desktop floor** duvar kağıdını değiştirir. **Restore previous wallpaper** eskisini geri koyar.
+- Çıkmak için tepsi menüsünden **Quit Rug**'ı seçin. Rug açıkken tekrar başlatmak sadece ayarları açar.
+
+Halının dışındaki tıklamalar doğrudan masaüstüne gider.
+
+### Halılar ve zeminler
+
+![Halılar](docs/rugs.jpg)
+
+Beş halı: Persian, Neural (devre kartı süslemeli), Soviet, Pixel ve Turkish. Persian, Neural, Soviet ve Pixel halıları macOS sürümüyle aynı resimlerdir.
+
+### Nasıl çalışır
+
+- Şeffaf bir pencere masaüstü simgelerinin üstünde, diğer pencerelerin altında durur. Halının dışındaki her fare tıklamasını görmezden gelir.
+- Simgelerin konumları Explorer'dan okunur, böylece her simge halıda doğru yere kabarcık olur.
+- Halı, sürtünme ve kendi kendine çarpışmalarla çalışan bir fizik simülasyonudur. Gerilmek yerine kıvrılır ve oturur.
+- Halı Direct3D 11 ile çizilir, yumuşak gölgeler ve resimdeki yün dokusu ile birlikte.
+
+### Bilinen sınırlamalar
+
+- Yalnızca ana monitör kapsanır.
+- Zemin gölgesi henüz çizilmiyor.
+- Explorer yeniden başlarsa Rug'ı da yeniden başlatın.
+- **Simgeleri otomatik hizala** açıkken süpürme çalışmaz.
+
+### Lisans
+
+MIT. Bkz. [LICENSE](LICENSE).
+
+### Teşekkür
+
+- Orijinal macOS uygulaması **Rug**, Artem tarafından yazıldı, MIT lisanslı. Masaüstünü halının altına süpürme fikri Terkel'in ilhamıdır.
+- Windows sürümü: CodeBlanks

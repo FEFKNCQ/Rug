@@ -1,0 +1,12 @@
+<Solution>
+  <Configurations>
+    <Platform Name="Any CPU" />
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="Rug/Rug.csproj">
+    <Platform Solution="Debug|x64" Project="AnyCPU" />
+    <Platform Solution="Release|x64" Project="AnyCPU" />
+  </Project>
+  <Project Path="rug_native/rug_native.vcxproj" Id="316e22b5-afa7-4807-b7dc-f7602a8f78b3" />
+</Solution>

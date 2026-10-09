@@ -1,0 +1,11 @@
+bin/
+obj/
+build/
+x64/
+rug_native/x64/
+rug_native/build/
+Rug/rug_native.dll
+.vs/
+*.user
+*.suo
+*.zip
