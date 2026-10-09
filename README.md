@@ -10,6 +10,10 @@ Thanks to [Terkel](https://x.com/terkelg) for the inspiration.
 
 This is a Windows port of [Rug for macOS](https://t.me/prompt_design) by Artem. The original app is the idea and the reference for the physics, lighting and settings. The Windows version is a new implementation, see [Credits](#credits).
 
+## Download
+
+Download `release-windows.zip` from [Releases](https://github.com/thecodeblanks/Rug/releases/latest), unzip it anywhere and run `Rug.exe`. Keep `rug_native.dll` next to it.
+
 ## Requirements
 
 - Windows 10 or 11, 64-bit
@@ -82,6 +86,10 @@ Masaüstünüzü halının altına süpürün. Ağır bir yün halı masaüstü 
 Bu proje, Artem'in macOS için yaptığı [Rug](https://t.me/prompt_design) uygulamasının Windows sürümüdür. Orijinal uygulama fikrin ve fizik, ışık ile ayarların referansıdır. Windows sürümü baştan yazılmış yeni bir uygulamadır, bkz. [Teşekkür](#teşekkür).
 
 Fikir için [Terkel](https://x.com/terkelg)'e teşekkür ederiz.
+
+### İndir
+
+[Releases](https://github.com/thecodeblanks/Rug/releases/latest) sayfasından `release-windows.zip` dosyasını indir, istediğin yere açıp `Rug.exe` dosyasını çalıştır. `rug_native.dll` dosyası yanında kalmalı.
 
 ### Gereksinimler
 
