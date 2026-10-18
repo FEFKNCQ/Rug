@@ -1,3 +1,15 @@
+> **分支声明 / Fork notice**
+> 本仓库是 [thecodeblanks/Rug](https://github.com/thecodeblanks/Rug) 的 fork（分支），作为原作者删除后的镜像备份。
+> This repository is a fork of [thecodeblanks/Rug](https://github.com/thecodeblanks/Rug), kept as a mirror backup.
+> 版权归原作者所有；源代码沿用原始许可证，原始版权与许可声明均完整保留、未作修改。
+
+> **🌐 国内 / 网络不佳时的下载备选（网盘镜像）**
+> 如果你在中国大陆，或访问 GitHub 出现**下载慢、速度为 0、`Failed to fetch`、`network error`、页面打不开**等情况，请**直接使用下方夸克网盘链接下载**，无需访问 GitHub：
+> **夸克网盘**：https://pan.quark.cn/s/8be3d7e03038 （微信扫码或点链接即可，含完整 release 文件）
+>
+> 若 GitHub 访问正常，也可在 [本 fork 的 Releases](https://github.com/M49P6BK/Rug/releases) 或 [原项目 Releases](https://github.com/thecodeblanks/Rug/releases) 下载。
+<img src="download-qr.png" width="160" alt="夸克网盘下载二维码 / Quark Drive QR code">
+
 # Rug for Windows
 
 Sweep your desktop under the rug. A heavy wool rug lies on top of your desktop icons, the icons make bumps in it, and you can grab any edge to peek at the mess underneath.
@@ -12,7 +24,7 @@ This is a Windows port of [Rug for macOS](https://t.me/prompt_design) by Artem. 
 
 ## Download
 
-Download `release-windows.zip` from [Releases](https://github.com/thecodeblanks/Rug/releases/latest), unzip it anywhere and run `Rug.exe`. Keep `rug_native.dll` next to it.
+Download `release-windows.zip` from [Releases](https://github.com/M49P6BK/Rug/releases/latest), unzip it anywhere and run `Rug.exe`. Keep `rug_native.dll` next to it.
 
 ## Requirements
 
@@ -89,7 +101,7 @@ Fikir için [Terkel](https://x.com/terkelg)'e teşekkür ederiz.
 
 ### İndir
 
-[Releases](https://github.com/thecodeblanks/Rug/releases/latest) sayfasından `release-windows.zip` dosyasını indir, istediğin yere açıp `Rug.exe` dosyasını çalıştır. `rug_native.dll` dosyası yanında kalmalı.
+[Releases](https://github.com/M49P6BK/Rug/releases/latest) sayfasından `release-windows.zip` dosyasını indir, istediğin yere açıp `Rug.exe` dosyasını çalıştır. `rug_native.dll` dosyası yanında kalmalı.
 
 ### Gereksinimler
 
